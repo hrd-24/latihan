@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:latihan/bussines/bussines.dart';
 import 'package:latihan/bussines/stack/stack_screen.dart';
+import 'package:latihan/drawer/drawer.dart';
+import 'package:latihan/login/login.dart';
 import 'package:latihan/grid/gridView.dart';
 import 'package:latihan/home/home.dart'; // Import HomeScreen
+import 'package:latihan/login/loginHrd.dart';
 import 'package:latihan/school/schoolModel.dart';
 
 void main() => runApp(const BottomNavigationBarExampleApp());
@@ -29,11 +32,12 @@ class _BottomNavigationBarExampleState
   int _selectedIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
+    LoginScreen(), // Reference the LoginScreen widget
     HomeScreen(), // Reference the HomeScreen widget
     BusinessScreen(), // Reference the BusinessScreen widget
     SchoolScreen(), // Reference the SchoolScreen widget
-    StackScreen(), // Reference the SchoolScreen widget
-    GridScreen(), // Reference the SchoolScreen widget
+    StackScreen(), // Reference the StackScreen widget
+    GridScreen(), // Reference the GridScreen widget
   ];
 
   void _onItemTapped(int index) {
@@ -49,6 +53,7 @@ class _BottomNavigationBarExampleState
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: 'List'),
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.business),label: 'Business',),
           BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),

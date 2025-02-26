@@ -9,7 +9,7 @@ class BusinessScreen extends StatelessWidget {
     return Scaffold(
  appBar: AppBar(
         title: const Text('Business Screen'),
-        backgroundColor: Colors.red,
+        backgroundColor: const Color.fromARGB(255, 235, 93, 83),
       ),      body: ListView.builder(
         itemCount: mapName.length,
         itemBuilder: (BuildContext context, int index) {

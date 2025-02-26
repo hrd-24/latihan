@@ -8,32 +8,26 @@ class GridScreen extends StatelessWidget {
     return MaterialApp(
       title: title,
       home: Scaffold(
-        appBar: AppBar(title: const Text(title)),
-        body: GridView.builder(
-          padding: const EdgeInsets.all(20.0),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount:MediaQuery.of(context).size.width>= 500?5: 2,
-            mainAxisSpacing: 50.0,
-            crossAxisSpacing: 50.0,
-            childAspectRatio: 1/1.25,
-          ),
-          itemCount: 100,
-          itemBuilder: (context, index) {
-            return Column(
-              children: <Widget>[
-                Image.network('https://picsum.photos/250?image=9'),
-                Text('Item $index'),
-              ],
-            );
-          },
+ appBar: AppBar(
+        title: const Text('Grid Screen'),
+        backgroundColor: Colors.brown,
+      ),        body: GridView.count(
           // Create a grid with 2 columns.
           // If you change the scrollDirection to horizontal,
           // this produces 2 rows.
+          crossAxisCount: 2,
           // Generate 100 widgets that display their index in the list.
+          children: List.generate(100, (index) {
+            return Center(
+              child: Text(
+                'Item $index',
+                style: TextTheme.of(context).headlineSmall,
+              
+              ),
+            );
+          }),
         ),
       ),
     );
   }
 }
-
-
