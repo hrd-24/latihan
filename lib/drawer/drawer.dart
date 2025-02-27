@@ -18,7 +18,7 @@ class DrawerScreen extends StatelessWidget {
               accountName: Text('Info Loker Pak'),
               accountEmail: Text('hrd@gmail.com'),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/sip.jpg'),
+                backgroundImage: AssetImage('assets/images/sip.jpg'), //
               ),
             ),
            ListTile(
