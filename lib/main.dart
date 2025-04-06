@@ -8,6 +8,8 @@ import 'package:latihan/home/home.dart'; // Import HomeScreen
 import 'package:latihan/login/loginHrd.dart';
 import 'package:latihan/school/schoolModel.dart';
 
+
+
 void main() => runApp(const BottomNavigationBarExampleApp());
 
 class BottomNavigationBarExampleApp extends StatelessWidget {
@@ -27,6 +29,8 @@ class BottomNavigationBarExample extends StatefulWidget {
       _BottomNavigationBarExampleState();
 }
 
+
+// This is the stateful widget that the main application instantiates.
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
